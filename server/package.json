@@ -8,11 +8,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js",
-    "seed": "node server/seeders/seed.js",
+    "start": "node server.js",
+    "seed": "node seeders/seed.js",
     "watch": "nodemon",
     "develop": "concurrently \"npm run watch\" \"cd client && npm start\"",
-    "install-package": "cd ./server npm i && cd ./client && npm i",
+    "install-package": "npm i && cd ../client && npm i",
     "build": "cd client && npm run build"
   },
   "repository": {
