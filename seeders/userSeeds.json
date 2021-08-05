@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Brian Kernighan",
+    "email": "bkernighan@techfriends.dev",
+    "password": "password01",
+    "dob": "1992-09-18T16:29:00-06:00",
+    "place_of_birth": "9 Alma Road, Mount Lawley, WA, 6050",
+    "birth_longitude": "32",
+    "birth_latitude": "00"
+  }
+]
