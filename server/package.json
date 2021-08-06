@@ -10,10 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node seeders/seed.js",
-    "watch": "nodemon",
-    "develop": "concurrently \"npm run watch\" \"cd client && npm start\"",
-    "install-package": "npm i && cd ../client && npm i",
-    "build": "cd client && npm run build"
+    "watch": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -28,14 +25,12 @@
   "dependencies": {
     "apollo-server-express": "^2.0.0",
     "bcrypt": "^5.0.1",
-    "craco": "0.0.3",
     "express": "^4.17.1",
     "express-jwt": "^6.0.0",
     "graphql": "^15.5.1",
     "mongoose": "^5.13.5"
   },
   "devDependencies": {
-    "concurrently": "^6.2.0",
     "nodemon": "2.0.7"
   }
 }
