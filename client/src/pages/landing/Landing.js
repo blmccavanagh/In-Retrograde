@@ -51,7 +51,7 @@ export default function Landing() {
                                         className="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-indigo-500"
                                         type="" placeholder="Enter your password" />
                                 </div>
-                                <div className="flex items-center justify-between">
+                                {/* <div className="flex items-center justify-between">
                                     <div className="flex items-center">
                                         <input id="remember_me" name="remember_me" type="checkbox"
                                             className="h-4 w-4 bg-blue-500 focus:ring-blue-400 border-gray-300 rounded" />
@@ -64,7 +64,7 @@ export default function Landing() {
                                             Forgot your password?
                                         </Link>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div>
                                     <button type="submit"
                                         className="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
