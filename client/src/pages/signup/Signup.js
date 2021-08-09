@@ -21,10 +21,13 @@ export default function Signup() {
                             <input type="text" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="Name" />
                         </div>
                         <div className="mt-5">
+                            <input type="text" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="Email" />
+                        </div>
+                        <div className="mt-5">
                             <input type="datetime-local" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="Date and Time of Birth" />
                         </div>
                         <div className="mt-5">
-                            <input type="text" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="Email" />
+                            <input type="text" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="Place of Birth" />
                         </div>
                         {/* <div className="mt-5">
                             <input type="text" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="Username" />
@@ -33,7 +36,7 @@ export default function Signup() {
                             <input type="password" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent  " placeholder="Password" />
                         </div>
 
-                        <div className="mt-6 block p-5 text-sm md:font-sans text-xs text-gray-800">
+                        {/* <div className="mt-6 block p-5 text-sm md:font-sans text-xs text-gray-800">
                             <input type="checkbox" className="inline-block border-0  " />
                             <span display="inline" className="">By creating an account you are agreeing to our
                                 <a className="" href="/s/terms" target="_blank" data-test="Link">
@@ -41,7 +44,7 @@ export default function Signup() {
                                 <a className="" href="/s/privacy" target="_blank" data-test="Link">
                                     <span className="underline">Privacy Policy</span> </a>
                             </span>
-                        </div>
+                        </div> */}
 
                         <div className="mt-10">
                             <button type="submit"
