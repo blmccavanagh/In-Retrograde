@@ -6,7 +6,7 @@ export default function Signup() {
         <div className="bg-white">
             <div className="flex min-h-screen bg-white">
 
-                <div className="w-1/2 bg-cover md:block hidden" style={{backgroundImage: "url(https://c4.wallpaperflare.com/wallpaper/769/924/837/best-of-space-high-resolution-wallpaper-preview.jpg)"}}></div>
+                <div className="w-1/2 bg-cover md:block hidden" style={{ backgroundImage: "url(https://c4.wallpaperflare.com/wallpaper/769/924/837/best-of-space-high-resolution-wallpaper-preview.jpg)" }}></div>
 
 
                 <div className="md:w-1/2 max-w-lg mx-auto my-24 px-4 py-5 shadow-none">
@@ -47,10 +47,12 @@ export default function Signup() {
                         </div> */}
 
                         <div className="mt-10">
-                            <button type="submit"
-                                className="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
-                                Sign up
-                            </button>
+                            <Link to="/home">
+                                <button type="submit"
+                                    className="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
+                                    Sign up
+                                </button>
+                            </Link>
                         </div>
                     </form>
                     <Link to="/" data-test="Link"><span className="block  p-5 text-center text-gray-800  text-xs ">Already have an account?</span></Link>
