@@ -1,3 +1,4 @@
 node_modules
 .env
 api.md
+.DS_Store
