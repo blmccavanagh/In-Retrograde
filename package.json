@@ -27,5 +27,8 @@
   "homepage": "https://github.com/blmccavanagh/In-Retrograde#readme",
   "devDependencies": {
     "concurrently": "^6.2.0"
+  },
+  "dependencies": {
+    "@mars/heroku-js-runtime-env": "^3.0.2"
   }
 }
