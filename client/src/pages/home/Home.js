@@ -6,8 +6,10 @@ import Navigation from '../../components/navigation/Navigation';
 export default function Home() {
     return (
         <div>
-            { Header }
-            { Navigation }
+            <div>
+                { Header }
+                { Navigation }
+            </div>
         </div>
     )
 }
