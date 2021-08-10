@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.css';
-import Navigation from '../navigation/Navigation';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg'
 
