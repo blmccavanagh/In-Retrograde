@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Redirect, Route } from "react-router";
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
+import { LOGIN_USER } from '../../utils/mutations';
 import { Auth } from '../../utils/auth';
 import login from './Login.css';
 
@@ -104,9 +104,11 @@ const Login = (props) => {
                                         </label>
                                         <input
                                             className="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-indigo-500"
-                                            type="password" placeholder="Enter your password" />
-                                        value={formState.password}
-                                        onChange={handleChange}
+                                            name="password"
+                                            type="password"
+                                            placeholder="Enter your password"
+                                            value={formState.password}
+                                            onChange={handleChange} />
                                     </div>
                                     {/* <div className="flex items-center justify-between">
                                     <div className="flex items-center">
