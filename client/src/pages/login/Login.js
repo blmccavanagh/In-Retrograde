@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import landing from './Landing.css';
+import { Auth } from '../../utils/auth'
+import login from './Login.css';
 
-export default function Landing() {
+export default Login(null, { Auth })(props => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+
+    const submitForm = () => {
+        if (email === "" || password === "") {
+            setError("Fields are required");
+            return;
+        }
+        props.Auth({ email, password });
+    };
+
     return (
         <div>
             <div className="relative min-h-screen flex ">
@@ -41,7 +54,7 @@ export default function Landing() {
                                     <label className="ml-3 text-sm font-bold text-gray-700 tracking-wide">Email</label>
                                     <input
                                         className=" w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
-                                        type="" placeholder="name@email.com" />
+                                        type="text" placeholder="name@email.com" />
                                 </div>
                                 <div className="mt-8 content-center">
                                     <label className="ml-3 text-sm font-bold text-gray-700 tracking-wide">
@@ -66,12 +79,10 @@ export default function Landing() {
                                     </div>
                                 </div> */}
                                 <div>
-                                    <Link to="/home">
-                                        <button type="submit"
-                                            className="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
-                                            Sign in
-                                        </button>
-                                    </Link>
+                                    <button type="submit"
+                                        className="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
+                                        Sign in
+                                    </button>
                                 </div>
                                 <p className="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
                                     <span>Don't have an account?</span>
@@ -86,4 +97,4 @@ export default function Landing() {
             </div>
         </div>
     );
-}
+});

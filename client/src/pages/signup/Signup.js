@@ -77,6 +77,9 @@ const Signup = () => {
                     </div>
                     <form onSubmit={handleFormSubmit} className="p-0">
                         <div className="mt-5">
+                        <label className="ml-3 text-sm font-bold text-gray-700 tracking-wide">
+                                        Name
+                                    </label>
                             <input 
                             className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent"
                             placeholder="Name"

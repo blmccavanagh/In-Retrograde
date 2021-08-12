@@ -18,7 +18,7 @@ export default function Home() {
         // if you can't decode the token it's not valid, direct the user back to the login page
 
         // if not valid
-        history.push('/')
+        history.push('/login')
         //if(){
         // }
 
