@@ -14,7 +14,7 @@ const userSchema = new Schema({
     match: [/.+@.+\..+/, 'Must match an email address!'],
   },
   dob: {
-    type: Schema.Types.Date,
+    type: String, 
     required: true,
   },
   timeOfBirth: {

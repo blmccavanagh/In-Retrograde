@@ -1,6 +1,8 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User } = require('../models');
 const { signToken } = require('../utils/auth');
+const {apiKey} = require('../config/openweather')
+const axios = require('axios').default;
 
 const resolvers = {
   Query: {
@@ -15,6 +17,14 @@ const resolvers = {
 
   Mutation: {
     addUser: async (parent, { name, email, password, dob, timeOfBirth, timezone, placeOfBirth }) => {
+      // call open weather api to get lon and lat
+      
+      const openweatherResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${placeOfBirth}&units=metric&appid=${apiKey}`) 
+
+      const birthLongitude = openweatherResponse.data.coord.lon;
+      const birthLatitude = openweatherResponse.data.coord.lat;
+
+      
 
       const user = await User.create({ name, email, password, dob, timeOfBirth, timezone, placeOfBirth, birthLongitude, birthLatitude });
       const token = signToken(user);
@@ -37,7 +47,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    
+
     removeUser: async (parent, { userId }) => {
       return User.findOneAndDelete({ _id: userId });
     },

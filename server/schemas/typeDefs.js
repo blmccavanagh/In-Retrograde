@@ -8,9 +8,11 @@ const typeDefs = gql`
     # There is now a field to store the user's password
     password: String
     dob: String
-    place_of_birth: String
-    birth_longitude: String
-    birth_latitude: String
+    timeOfBirth: String
+    timezone: String
+    placeOfBirth: String
+    birthLongitude: String
+    birthLatitude: String 
   }
 
   # Set up an Auth type to handle returning data from a user creating or user login
@@ -26,7 +28,7 @@ const typeDefs = gql`
 
   type Mutation {
     # Set up mutations to handle creating a user or logging into a user and return Auth type
-    addUser(name: String!, email: String!, password: String!): Auth
+    addUser(name: String!, email: String!, dob: String!, timeOfBirth: String!, timezone: String!, placeOfBirth: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
     removeUser(userId: ID!): User

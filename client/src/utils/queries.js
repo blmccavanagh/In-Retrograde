@@ -1,5 +1,12 @@
 import { gql } from '@apollo/client';
 
+
+
+//  new query QUERY_HOROSCOPE 
+// this goes to backend resolver
+// in the backend resolver is where you call the api
+// make sure typedefs are working, look inside api response, think about what you need to display
+
 export const QUERY_USERS = gql`
   query allUsers {
     users {

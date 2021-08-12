@@ -80,7 +80,7 @@ const Signup = () => {
                             <input 
                             className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent"
                             placeholder="Name"
-                            name="username"
+                            name="name"
                             type="text"
                             value={formState.name}
                             onChange={handleChange}/>
@@ -96,7 +96,9 @@ const Signup = () => {
                             />
                         </div>
                         <div className="mt-5">
+                            <label for="date-and-time">Datetime of Birth</label>
                             <input
+                            id="date-and-time"
                             className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent"
                             placeholder="Date and Time of Birth"
                             name="dateAndTime"
