@@ -1,7 +1,8 @@
 import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
-import logo from '../../images/logo.svg'
+import logo from '../../images/logo.svg';
+import Navigation from '../navigation/Navigation';
 
 export default function Header() {
     return (
@@ -12,13 +13,7 @@ export default function Header() {
                 <h1 className="pMono text-white font-bold inline-block text-left ml-0 lg:text-4xl">in retrograde</h1>
             </div>
 
-            <div className="flex flex-col items-stretch w-auto my-auto mr-1 lg:m-0 text-xl text-center transform md:flex-row md:translate-y-0 md:space-x-5 md:items-center md:justify-end md:pr-3 pMono">
-                <Link key="Logout" to="/">
-                    <button className="bg-pink-200 rounded-2xl p-1.5 text-black text-right font-bold text-xs lg:text-lg">
-                        logout
-                    </button>
-                </Link>
-            </div>
+            <Navigation></Navigation>
         </div>
 
     )

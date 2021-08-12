@@ -1,7 +1,7 @@
 import { useMutation } from '@apollo/client';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Auth } from '../../utils/auth';
+import auth from '../../utils/auth';
 import { ADD_USER } from '../../utils/mutations';
 import { DateTime } from 'luxon';
 
@@ -55,14 +55,14 @@ const Signup = () => {
         },
       });
 
-      Auth.login(data.addUser.token);
+      auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
     }
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white poppins">
       <div className="flex min-h-screen bg-white">
 
         <div className="w-1/2 bg-cover md:block hidden" style={{ backgroundImage: "url(https://c4.wallpaperflare.com/wallpaper/769/924/837/best-of-space-high-resolution-wallpaper-preview.jpg)" }}></div>
