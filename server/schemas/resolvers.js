@@ -14,8 +14,9 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, { name, email, password }) => {
-      const user = await User.create({ name, email, password, dob, place_of_birth, birth_longitude, birth_latitude });
+    addUser: async (parent, { name, email, password, dob, timeOfBirth, timezone, placeOfBirth }) => {
+
+      const user = await User.create({ name, email, password, dob, timeOfBirth, timezone, placeOfBirth, birthLongitude, birthLatitude });
       const token = signToken(user);
 
       return { token, user };
@@ -36,19 +37,7 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-
-    // addSkill: async (parent, { userId, skill }) => {
-    //   return User.findOneAndUpdate(
-    //     { _id: userId },
-    //     {
-    //       $addToSet: { skills: skill },
-    //     },
-    //     {
-    //       new: true,
-    //       runValidators: true,
-    //     }
-    //   );
-    // },
+    
     removeUser: async (parent, { userId }) => {
       return User.findOneAndDelete({ _id: userId });
     },

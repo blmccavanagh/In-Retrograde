@@ -1,0 +1,1 @@
+module.exports = { apikey:process.env.OPENWEATHER_API_KEY }

@@ -1,7 +1,66 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { useMutation } from '@apollo/client';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Auth } from '../../utils/auth';
+import { ADD_USER } from '../../utils/mutations';
+import {DateTime} from 'luxon'
 
-export default function Signup() {
+const Signup = () => {
+    const [formState, setFormState] = useState({
+      name: '',
+      email: '',
+      dateAndTime: '',
+      timezone: '',
+      placeOfBirth: '',
+      password: '',
+    });
+    const [addUser, { error, data }] = useMutation(ADD_USER);
+  
+    const handleChange = (event) => {
+      const { name, value } = event.target;
+  
+      setFormState({
+        ...formState,
+        [name]: value,
+      });
+    };
+  
+    const handleFormSubmit = async (event) => {
+      event.preventDefault();
+      console.log(formState);
+      const payload = {...formState};
+      // parse dateAndTime into dob and time Of Brith
+      const datetime = DateTime.fromISO(payload.dateAndTime);
+
+      // DD-MM-YYYY
+      const dob = datetime.toFormat('dd-LL-yyyy');
+      const timeOfBirth = datetime.toFormat('HH:mm');
+
+      console.log({ 
+        ...payload,
+        dob,
+        timeOfBirth
+  
+    })
+
+
+  
+      try {
+        const { data } = await addUser({
+          variables: { 
+              ...payload,
+              dob,
+              timeOfBirth
+        
+        },
+        });
+  
+        Auth.login(data.addUser.token);
+      } catch (e) {
+        console.error(e);
+      }
+    };
+
     return (
         <div className="bg-white">
             <div className="flex min-h-screen bg-white">
@@ -16,43 +75,73 @@ export default function Signup() {
                         <h1 className=" text-gray-800 text-3xl font-medium">Create an account for free</h1>
                         <h3 className="p-1 text-gray-700">Free forever. No payment needed.</h3>
                     </div>
-                    <form action="#" className="p-0">
+                    <form onSubmit={handleFormSubmit} className="p-0">
                         <div className="mt-5">
-                            <input type="text" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="Name" />
+                            <input 
+                            className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent"
+                            placeholder="Name"
+                            name="username"
+                            type="text"
+                            value={formState.name}
+                            onChange={handleChange}/>
                         </div>
                         <div className="mt-5">
-                            <input type="text" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="Email" />
+                            <input
+                            className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent "
+                            placeholder="Email" 
+                            name="email"
+                            type="email"
+                            value={formState.email}
+                            onChange={handleChange}
+                            />
                         </div>
                         <div className="mt-5">
-                            <input type="datetime-local" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="Date and Time of Birth" />
+                            <input
+                            className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent"
+                            placeholder="Date and Time of Birth"
+                            name="dateAndTime"
+                            type="datetime-local" 
+                            value={formState.dateAndTime}
+                            onChange={handleChange}
+                            />
                         </div>
                         <div className="mt-5">
-                            <input type="text" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="Place of Birth" />
+                            <input
+                            className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent"
+                            placeholder="Timezone (eg -5, +4 etc)"
+                            name="timezone"
+                            type="number" 
+                            value={formState.timezone}
+                            onChange={handleChange}
+                            />
                         </div>
-                        {/* <div className="mt-5">
-                            <input type="text" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent " placeholder="Username" />
-                        </div> */}
                         <div className="mt-5">
-                            <input type="password" className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent  " placeholder="Password" />
+                            <input
+                            className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent "
+                            placeholder="Place of Birth"
+                            name="placeOfBirth"
+                            type="text"
+                            value={formState.placeOfBirth}
+                            onChange={handleChange}
+                            />
                         </div>
-
-                        {/* <div className="mt-6 block p-5 text-sm md:font-sans text-xs text-gray-800">
-                            <input type="checkbox" className="inline-block border-0  " />
-                            <span display="inline" className="">By creating an account you are agreeing to our
-                                <a className="" href="/s/terms" target="_blank" data-test="Link">
-                                    <span className="underline ">Terms and Conditions</span> </a> and
-                                <a className="" href="/s/privacy" target="_blank" data-test="Link">
-                                    <span className="underline">Privacy Policy</span> </a>
-                            </span>
-                        </div> */}
+                        <div className="mt-5">
+                            <input
+                            className="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent"
+                            placeholder="Password"
+                            name="password"
+                            type="password"
+                            value={formState.password}
+                            onChange={handleChange}
+                            />
+                        </div>
 
                         <div className="mt-10">
-                            <Link to="/home">
-                                <button type="submit"
-                                    className="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500">
+                                <button
+                                    className="w-full flex justify-center bg-gradient-to-r from-indigo-500 to-blue-600  hover:bg-gradient-to-l hover:from-blue-500 hover:to-indigo-600 text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer transition ease-in duration-500"
+                                    type="submit">
                                     Sign up
                                 </button>
-                            </Link>
                         </div>
                     </form>
                     <Link to="/" data-test="Link"><span className="block  p-5 text-center text-gray-800  text-xs ">Already have an account?</span></Link>
@@ -63,3 +152,5 @@ export default function Signup() {
         </div>
     )
 }
+
+export default Signup;

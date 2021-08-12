@@ -17,13 +17,19 @@ const userSchema = new Schema({
     type: Schema.Types.Date,
     required: true,
   },
-  place_of_birth: {
+  timeOfBirth: {
     type: String
   },
-  birth_longitude: {
+  timezone: {
     type: String
   },
-  birth_latitude: {
+  placeOfBirth: {
+    type: String
+  },
+  birthLongitude: {
+    type: String
+  },
+  birthLatitude: {
     type: String
   },
   password: {
