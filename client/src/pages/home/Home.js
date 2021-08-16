@@ -8,31 +8,20 @@ import Header from '../../components/header/Header';
 export default function Home() {
 
     const history = useHistory();
-    // useEffect
     /// check if there is a token in local storage
     // if no redirect the user to login page
     useEffect(() => {
         auth.loggedIn() || history.push('/login')
-
-        // if token is not null (refer to class activity + AuthService)
-        // verify token, ie sending the token to a backend endpoint to verify, // decode token
-        // if you can't decode the token it's not valid, direct the user back to the login page
-
-        // if not valid
-
-        //if(){
-        // }
-
 
     }, [history]);
 
     return (
         <div>
             <Header />
-            <div className="h-full hidden md:flex flex-auto items-center justify-center p-10 overflow-hidden bg-purple-900 text-white bg-no-repeat bg-cover relative"
-                style={{ backgroundImage: "url(https://c4.wallpaperflare.com/wallpaper/769/924/837/best-of-space-high-resolution-wallpaper-preview.jpg)" }}>
-                <div className="absolute bg-gradient-to-b from-indigo-600 to-blue-500 opacity-75 inset-0 z-0"></div>
-                <div className="w-full  max-w-md z-10">
+            <div className="h-full md:flex flex-auto items-center justify-center p-10 overflow-hidden bg-purple-900 text-white bg-no-repeat bg-cover relative"
+            >
+                <div className="absolute bg-gradient-to-b from-indigo-600 to-blue-500 opacity-10 lg:opacity-75 inset-0 z-0"></div>
+                <div className="w-full z-10">
                     <br />
                     <div className="poppins text-center text-white">
                         <h4 className="text-sm">
@@ -44,7 +33,7 @@ export default function Home() {
                         </h1>
                         <br />
                         <h4 className="text-sm">
-                            Power in <span className="underline">thinking & creativity</span>, <span className="underline">spirituality</span>, <span className="underline">social life</span>, and <span className="underline">self</span>. Trouble with <span className="underline">troutine</span> and <span className="underline">sex & love</span>.
+                            Power in <span className="underline">thinking & creativity</span>, <span className="underline">spirituality</span>, <span className="underline">social life</span>, and <span className="underline">self</span>. Trouble with <span className="underline">routine</span> and <span className="underline">sex & love</span>.
                         </h4>
                         <br />
                         <br />
@@ -67,6 +56,8 @@ export default function Home() {
                             A new friendship is developing into something more intense. Intimacy is a gift that comes with obligations. You can choose how to respond.
                         </h4>
                         <br />
+                        <br />
+                        <br />
                         <h4 className="text-sm">
                             How to handle this period
                         </h4>
@@ -81,9 +72,11 @@ export default function Home() {
                         <br />
                         <br />
                         <br />
-                        <h3 className="pMono text-base font-bold underline">
-                            VIEW YOUR CHART
-                        </h3>
+                        <Link key="Chart" to="/chart">
+                            <h3 className="pMono text-base font-bold underline">
+                                VIEW YOUR CHART
+                            </h3>
+                        </Link>
                     </div>
                 </div>
                 <ul className="circles">
