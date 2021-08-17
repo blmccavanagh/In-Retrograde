@@ -50,13 +50,7 @@ const resolvers = {
     removeUser: async (parent, { userId }) => {
       return User.findOneAndDelete({ _id: userId });
     },
-    // removeSkill: async (parent, { userId, skill }) => {
-    //   return User.findOneAndUpdate(
-    //     { _id: userId },
-    //     { $pull: { skills: skill } },
-    //     { new: true }
-    //   );
-    // },
+
   },
 };
 
