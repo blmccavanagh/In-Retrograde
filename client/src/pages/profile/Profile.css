@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&display=swap');
+
+.bg-light-img {
+    background-image: url("../../images/background-image-light.png");
+}
+
+.bg-dark-img {
+    background-image: url("../../images/background-image-light.png")
+}
+
+.bg-space-img {
+    background-image: url("../../images/background-image-space.png");
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+
+.pMono {
+    font-family: 'IBM Plex Mono', monospace;
+}

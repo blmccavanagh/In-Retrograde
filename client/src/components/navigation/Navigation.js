@@ -26,6 +26,11 @@ export default function Navigation() {
                         chart
                     </button>
                 </Link>
+                <Link key="Profile" to="/profile">
+                    <button className="p-1 text-white text-right text-xs lg:text-base">
+                        profile
+                    </button>
+                </Link>
                 {/* <Link key="weekly forecast" to="/">
                     <button className="p-1 text-white text-right text-xs lg:text-base">
                         weekly forecast
