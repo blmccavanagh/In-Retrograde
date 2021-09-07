@@ -8,9 +8,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 import chandler from '../../images/chandler.png';
+import janice from '../../images/janice.png';
 import joey from '../../images/joey.png';
+import mike from '../../images/mike.png';
 import monica from '../../images/monica.png';
 import phoebe from '../../images/phoebe.png';
+import rachel from '../../images/rachel.png';
+import richard from '../../images/richard.png';
 import ross from '../../images/ross.png';
 
 export default function Friends() {
@@ -43,9 +47,21 @@ export default function Friends() {
                             </li>
                             <br />
                             <li>
+                                <img src={janice} className="rounded-full h-16 w-16 mx-auto mb-2" />
+                                <Link className="pMono font-bold">Janice Litman-Goralnik</Link><span className="text-xs pMono font-bold"> @ohmygod</span>
+                                <p> <FontAwesomeIcon icon={faSun} /> Sagittarius <FontAwesomeIcon icon={faMoon} /> Gemini <FontAwesomeIcon icon={faArrowUp} /> Leo</p>
+                            </li>
+                            <br />
+                            <li>
                                 <img src={joey} className="rounded-full h-16 w-16 mx-auto mb-2" />
                                 <Link className="pMono font-bold">Joseph Tribbiani</Link><span className="text-xs pMono font-bold"> @howudoin</span>
                                 <p> <FontAwesomeIcon icon={faSun} /> Capricorn <FontAwesomeIcon icon={faMoon} /> Leo <FontAwesomeIcon icon={faArrowUp} /> Taurus</p>
+                            </li>
+                            <br />
+                            <li>
+                                <img src={mike} className="rounded-full h-16 w-16 mx-auto mb-2" />
+                                <Link className="pMono font-bold">Mike Hannigan</Link><span className="text-xs pMono font-bold"> @crapbag</span>
+                                <p> <FontAwesomeIcon icon={faSun} /> Aries <FontAwesomeIcon icon={faMoon} /> Taurus <FontAwesomeIcon icon={faArrowUp} /> Scorpio</p>
                             </li>
                             <br />
                             <li>
@@ -58,6 +74,18 @@ export default function Friends() {
                                 <img src={phoebe} className="rounded-full h-16 w-16 mx-auto mb-2" />
                                 <Link className="pMono font-bold">Phoebe Buffay</Link><span className="text-xs pMono font-bold"> @holdmeclosertonydanza</span>
                                 <p> <FontAwesomeIcon icon={faSun} /> Aquarius <FontAwesomeIcon icon={faMoon} /> Cancer <FontAwesomeIcon icon={faArrowUp} /> Aquarius</p>
+                            </li>
+                            <br />
+                            <li>
+                                <img src={rachel} className="rounded-full h-16 w-16 mx-auto mb-2" />
+                                <Link className="pMono font-bold">Rachel Green</Link><span className="text-xs pMono font-bold"> @iamahat</span>
+                                <p> <FontAwesomeIcon icon={faSun} /> Taurus <FontAwesomeIcon icon={faMoon} /> Libra <FontAwesomeIcon icon={faArrowUp} /> Leo</p>
+                            </li>
+                            <br />
+                            <li>
+                                <img src={richard} className="rounded-full h-16 w-16 mx-auto mb-2" />
+                                <Link className="pMono font-bold">Richard Burke</Link><span className="text-xs pMono font-bold"> @mustacheandcigar</span>
+                                <p> <FontAwesomeIcon icon={faSun} /> Sagittarius <FontAwesomeIcon icon={faMoon} /> Libra <FontAwesomeIcon icon={faArrowUp} /> Capricorn</p>
                             </li>
                             <br />
                             <li>
