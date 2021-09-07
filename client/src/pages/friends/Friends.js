@@ -41,14 +41,16 @@ export default function Friends() {
                         <br />
                         <ul>
                             <li>
-                                <img src={chandler} className="rounded-full h-16 w-16 mx-auto mb-2" />
-                                <Link className="pMono font-bold">Chandler Bing</Link><span className="text-xs pMono font-bold"> @mrscbong</span>
-                                <p> <FontAwesomeIcon icon={faSun} /> Gemini <FontAwesomeIcon icon={faMoon} /> Pisces <FontAwesomeIcon icon={faArrowUp} /> Virgo</p>
+                                <Link key="Chandler" to="/chandler_bing" className="pMono font-bold">
+                                    <img src={chandler} className="rounded-full h-16 w-16 mx-auto mb-2" />Chandler Bing<span className="text-xs pMono font-bold"> @mrscbong</span>
+                                </Link>
+                                <p> <FontAwesomeIcon icon={faSun} /> Gemini <FontAwesomeIcon icon={faMoon} /> Leo <FontAwesomeIcon icon={faArrowUp} /> Aquarius</p>
                             </li>
                             <br />
                             <li>
-                                <img src={janice} className="rounded-full h-16 w-16 mx-auto mb-2" />
-                                <Link className="pMono font-bold">Janice Litman-Goralnik</Link><span className="text-xs pMono font-bold"> @ohmygod</span>
+                                <Link className="pMono font-bold">
+                                    <img src={janice} className="rounded-full h-16 w-16 mx-auto mb-2" />Janice Litman-Goralnik<span className="text-xs pMono font-bold"> @ohmygod</span>
+                                </Link>
                                 <p> <FontAwesomeIcon icon={faSun} /> Sagittarius <FontAwesomeIcon icon={faMoon} /> Gemini <FontAwesomeIcon icon={faArrowUp} /> Leo</p>
                             </li>
                             <br />

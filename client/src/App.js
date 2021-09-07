@@ -15,6 +15,7 @@ import Home from './pages/home/Home';
 import Chart from './pages/chart/Chart';
 import Friends from './pages/friends/Friends';
 import Profile from './pages/profile/Profile';
+import Chandler from './pages/chandler/Chandler';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -51,6 +52,7 @@ function App() {
           <Route exact path="/chart" component={Chart}></Route>
           <Route exact path="/friends" component={Friends}></Route>
           <Route exact path="/profile" component={Profile}></Route>
+          <Route exact path="/chandler_bing" component={Chandler}></Route>
           <Route path="/" component={Home}></Route>
 
         </Switch>
