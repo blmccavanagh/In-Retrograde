@@ -4,6 +4,7 @@ import auth from '../../utils/auth';
 
 import './Home.css';
 import Header from '../../components/header/Header';
+import profileImage from '../../images/profile.png';
 
 export default function Home() {
 
@@ -31,6 +32,9 @@ export default function Home() {
                         <h1 className="pMono text-2xl font-bold">
                             Almost Touch.
                         </h1>
+                        <br />
+                        <br />
+                        <img src={profileImage} className="rounded-full h-24 w-24 mx-auto"/>
                         <br />
                         <h4 className="text-sm">
                             Power in <span className="underline">thinking & creativity</span>, <span className="underline">spirituality</span>, <span className="underline">social life</span>, and <span className="underline">self</span>. Trouble with <span className="underline">routine</span> and <span className="underline">sex & love</span>.

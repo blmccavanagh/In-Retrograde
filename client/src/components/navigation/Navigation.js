@@ -26,6 +26,11 @@ export default function Navigation() {
                         chart
                     </button>
                 </Link>
+                <Link key="Friends" to="/friends">
+                    <button className="p-1 text-white text-right text-xs lg:text-base">
+                        friends
+                    </button>
+                </Link>
                 <Link key="Profile" to="/profile">
                     <button className="p-1 text-white text-right text-xs lg:text-base">
                         profile
