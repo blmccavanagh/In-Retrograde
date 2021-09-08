@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import auth from '../../utils/auth';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon, faArrowUp, faArrowRight, faMercury, faVenus, faMars, faJupiter } from '@fortawesome/free-solid-svg-icons';
 
 import Header from '../../components/header/Header';
 
@@ -30,25 +32,39 @@ export default function Profile() {
                         <h1 className="pMono font-bold text-2xl">Hello Bridget!</h1>
                         <br />
                         <br />
-                        <ul>
-                            <li><Link className="bg-purple-900 rounded p-1">Connect to Facebook</Link></li>
+
+                        <div className="grid grid-cols-2 gap-2 bg-purple-500 bg-opacity-90 p-4 rounded-2xl">
+                            <p className="bg-white text-black">Name</p>
+                            <input type="text" placeholder="Bridget Louise McCavanagh"></input>
+                            <p className="bg-white text-black">Username</p>
+                            <input type="text" placeholder="blmccavanagh"></input>
+                            <p className="bg-white text-black">Connect Facebook</p>
+                            <FontAwesomeIcon icon={faArrowRight} />
+                            <p className="bg-white text-black">Phone number</p>
+                            <input type="text" placeholder="0412 345 678"></input>
+                            <p className="bg-white text-black">Change profile photo</p>
+                            <img src={profileImage} className="h-10 w-10 rounded-full"/>
+                        </div>
+                        <br />
+
+                        <h1 className="pMono font-bold">CHART</h1>
+                        <br />
+                        <div className="grid grid-cols-2 gap-2 bg-purple-500 bg-opacity-90 p-4 rounded-2xl text-black">
+                            <p className="bg-white text-black">Birth date</p>
+                            <input type="date" value="1992-09-18" className="text-black"></input>
+                            <p className="bg-white text-black">Birth time</p>
+                            <input type="time" value="16:29"></input>
+                            <p className="bg-white text-black">Birth place</p>
+                            <input type="text" placeholder="Katy, Texas"></input>
+                        </div>
+                        <br />
+
+                        <ul className="bg-purple-500 bg-opacity-90 p-4 m-0.5 rounded-2xl">
+                            <li><Link className="bg-white text-black rounded p-1">Update Password</Link></li>
                             <br />
-                            <li><Link className="bg-purple-900 rounded p-1">Update Name</Link></li>
+                            <li><Link className="bg-white text-black rounded p-1">Logout</Link></li>
                             <br />
-                            <li><Link className="bg-purple-900 rounded p-1">Update Username</Link></li>
-                            <br />
-                            <li><Link className="bg-purple-900 rounded p-1">Update Profile Picture</Link></li>
-                            <br />
-                            <li><Link className="bg-purple-900 rounded p-1">Update Date of Birth</Link></li>
-                            <br />
-                            <li><Link className="bg-purple-900 rounded p-1">Update Time of Birth</Link></li>
-                            <br />
-                            <li><Link className="bg-purple-900 rounded p-1">Update Place of Birth</Link></li>
-                            <br />
-                            <li><Link className="bg-purple-900 rounded p-1">Update Password</Link></li>
-                            <br />
-                            <li><Link className="bg-purple-900 rounded p-1">Delete Account</Link></li>
-                            <br />
+                            <li><Link className="bg-white text-black rounded p-1">Delete Account</Link></li>
                         </ul>
                     </div>
                 </div>
