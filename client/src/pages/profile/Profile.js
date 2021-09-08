@@ -4,6 +4,8 @@ import auth from '../../utils/auth';
 
 import Header from '../../components/header/Header';
 
+import profileImage from '../../images/profile.png';
+
 export default function Profile() {
 
     const history = useHistory();
@@ -23,15 +25,21 @@ export default function Profile() {
                 <div className="w-full z-10">
                     <br />
                     <div className="poppins text-center text-white">
-                        <h1 className="pMono font-bold text-2xl">Hello (user)!</h1>
+                        <img src={profileImage} className="rounded-full h-24 w-24 mx-auto" />
+                        <br />
+                        <h1 className="pMono font-bold text-2xl">Hello Bridget!</h1>
                         <br />
                         <br />
                         <ul>
-                            <li><Link className="bg-purple-900 rounded p-1">Update Username</Link></li>
+                            <li><Link className="bg-purple-900 rounded p-1">Connect to Facebook</Link></li>
                             <br />
                             <li><Link className="bg-purple-900 rounded p-1">Update Name</Link></li>
                             <br />
-                            <li><Link className="bg-purple-900 rounded p-1">Update DOB</Link></li>
+                            <li><Link className="bg-purple-900 rounded p-1">Update Username</Link></li>
+                            <br />
+                            <li><Link className="bg-purple-900 rounded p-1">Update Profile Picture</Link></li>
+                            <br />
+                            <li><Link className="bg-purple-900 rounded p-1">Update Date of Birth</Link></li>
                             <br />
                             <li><Link className="bg-purple-900 rounded p-1">Update Time of Birth</Link></li>
                             <br />
