@@ -61,7 +61,7 @@ export default function Chandler() {
                             <h1 className="text-2xl text-left border-0 border-t border-white border-opacity-25 py-4">
                                 Compatibility
                             </h1>
-                            <div className="grid grid-cols-6 grid-rows-5 gap-y-1 text-left md:w-1/3">
+                            <div className="grid grid-cols-6 grid-rows-5 gap-y-3 text-left md:w-1/3">
                                 <div className="bg-white text-black row-span-5 w-6 text-center">
                                     <FontAwesomeIcon icon={faSmile} />
                                 </div>
@@ -285,6 +285,30 @@ export default function Chandler() {
                             <br />
                             <p>
                                 The ways you grow and dream are aligned and make intuitive sense to each other.
+                            </p>
+                        </div>
+                        <div className="border border-dotted border-white border-opacity-25 p-4 rounded-xl bg-gray-400 text-black m-1 md:m-4">
+                            <h1>♄</h1>
+                            <h1 className="pMono text-xl font-bold">
+                                SATURN
+                            </h1>
+                            <h3 className="pMono font-bold">
+                                YOU: AQUARIUS
+                            </h3>
+                            <h3 className="pMono font-bold">
+                                THEM: VIRGO
+                            </h3>
+                            <br />
+                            <p>
+                                The other social planet, Saturn rules responsibility, restrictions, limits, boundaries, fears, and self-discipline.
+                            </p>
+                            <br />
+                            <p>
+                                Your Saturn is in Aquarius, meaning you struggle with obstinacy, a superiority complex, and being overly detached. Their Saturn is in Virgo, meaning they struggle with perfectionism, a critical eye, workaholic tendencies, and their need to be pure.
+                            </p>
+                            <br />
+                            <p>
+                                Your struggles are fairly different, but with empathy, you can help each other grow.
                             </p>
                         </div>
 
