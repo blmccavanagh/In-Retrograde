@@ -5,7 +5,7 @@ import auth from '../../utils/auth';
 import Header from '../../components/header/Header';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon, faArrowUp, faArrowRight, faMercury, faVenus, faMars, faJupiter } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faMoon, faArrowUp, faMercury, faVenus, faMars } from '@fortawesome/free-solid-svg-icons';
 import { faSmile, faMeh, faFrown, } from '@fortawesome/free-regular-svg-icons';
 
 import chandler from '../../images/chandler.png';
