@@ -61,7 +61,7 @@ export default function Chandler() {
                             <h1 className="text-2xl text-left border-0 border-t border-white border-opacity-25 py-4">
                                 Compatibility
                             </h1>
-                            <div className="grid grid-cols-6 grid-rows-5 text-left md:w-1/3">
+                            <div className="grid grid-cols-6 grid-rows-5 gap-y-1 text-left md:w-1/3">
                                 <div className="bg-white text-black row-span-5 w-6 text-center">
                                     <FontAwesomeIcon icon={faSmile} />
                                 </div>
