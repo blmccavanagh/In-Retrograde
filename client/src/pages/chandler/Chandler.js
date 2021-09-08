@@ -5,7 +5,8 @@ import auth from '../../utils/auth';
 import Header from '../../components/header/Header';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon, faArrowUp, faSmile, faArrowRight, faMercury, faVenus } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faMoon, faArrowUp, faArrowRight, faMercury, faVenus, faMars, faJupiter } from '@fortawesome/free-solid-svg-icons';
+import { faSmile, faMeh, faFrown } from '@fortawesome/free-regular-svg-icons';
 
 import chandler from '../../images/chandler.png';
 
@@ -60,7 +61,7 @@ export default function Chandler() {
                             <h1 className="text-2xl text-left border-0 border-t border-white border-opacity-25 py-4">
                                 Compatibility
                             </h1>
-                            <div className="grid grid-cols-6 grid-rows-5 text-left md:w-1/4">
+                            <div className="grid grid-cols-6 grid-rows-5 text-left md:w-1/3">
                                 <div className="bg-white text-black row-span-5 w-6 text-center">
                                     <FontAwesomeIcon icon={faSmile} />
                                 </div>
@@ -80,6 +81,63 @@ export default function Chandler() {
                                     </h4>
                                     <h4 className="poppins font-light">
                                         Cancer — Virgo
+                                    </h4>
+                                </div>
+                                <FontAwesomeIcon icon={faVenus} />
+                                <div className="col-span-4">
+                                    <h4>
+                                        LOVE & PLEASURE
+                                    </h4>
+                                    <h4 className="poppins font-light">
+                                        Gemini — Libra
+                                    </h4>
+                                </div>
+                                <FontAwesomeIcon icon={faMars} />
+                                <div className="col-span-4">
+                                    <h4>
+                                        SEX & AGGRESSION
+                                    </h4>
+                                    <h4 className="poppins font-light">
+                                        Virgo — Cancer
+                                    </h4>
+                                </div>
+                                <p>♃</p>
+                                <div className="col-span-4">
+                                    <h4>
+                                        PHILOSOPHIES OF LIFE
+                                    </h4>
+                                    <h4 className="poppins font-light">
+                                        Virgo — Virgo
+                                    </h4>
+                                </div>
+                            </div>
+                            <br />
+                            <div className="grid grid-cols-6 grid-rows-1 text-left md:w-1/3">
+                                <div className="bg-gray-400 text-black w-6 text-center">
+                                    <FontAwesomeIcon icon={faMeh} />
+                                </div>
+                                <p>♄</p>
+                                <div className="col-span-4">
+                                    <h4>
+                                        SENSES OF RESPONSIBILITY
+                                    </h4>
+                                    <h4 className="poppins font-light">
+                                        Leo — Gemini
+                                    </h4>
+                                </div>
+                            </div>
+                            <br />
+                            <div className="grid grid-cols-6 grid-rows-1 text-left md:w-1/3">
+                                <div className="bg-black text-white w-6 text-center">
+                                    <FontAwesomeIcon icon={faFrown} />
+                                </div>
+                                <FontAwesomeIcon icon={faSun} />
+                                <div className="col-span-4">
+                                    <h4>
+                                        BASIC IDENTITIES
+                                    </h4>
+                                    <h4 className="poppins font-light">
+                                        Gemini — Virgo
                                     </h4>
                                 </div>
                             </div>
@@ -179,6 +237,54 @@ export default function Chandler() {
                             <br />
                             <p>
                                 You communicate and think in similar ways.
+                            </p>
+                        </div>
+                        <div className="border border-dotted border-white border-opacity-25 p-4 rounded-xl bg-white text-black m-1 md:m-4">
+                            <FontAwesomeIcon icon={faMars} className="text-2xl" />
+                            <h1 className="pMono text-xl font-bold">
+                                MARS
+                            </h1>
+                            <h3 className="pMono font-bold">
+                                YOU: CANCER
+                            </h3>
+                            <h3 className="pMono font-bold">
+                                THEM: VIRGO
+                            </h3>
+                            <br />
+                            <p>
+                                Mars is the planet of aggression. It determines how you assert yourself, take action, and the energy that surrounds you—particularly in your sex life, your ambitiousness, and when you're angry.
+                            </p>
+                            <br />
+                            <p>
+                                Your Mars is in Cancer, meaning you assert yourself in a way that is emotional and somewhat passive-aggressive, and you push things forward only when you feel safe and secure.  Their Mars is in Virgo, meaning they assert themselves in a way that is precise, and they push things forward with diligence, intention, and hard work. They're rarely willing to go out on a limb — their tendency to be intentional and analytical means they need to know that the situation is right before they act.
+                            </p>
+                            <br />
+                            <p>
+                                Your passion and sexuality are extremely compatible.♃
+                            </p>
+                        </div>
+                        <div className="border border-dotted border-white border-opacity-25 p-4 rounded-xl bg-white text-black m-1 md:m-4">
+                            <h1>♃</h1>
+                            <h1 className="pMono text-xl font-bold">
+                                JUPITER
+                            </h1>
+                            <h3 className="pMono font-bold">
+                                YOU: VIRGO
+                            </h3>
+                            <h3 className="pMono font-bold">
+                                THEM: VIRGO
+                            </h3>
+                            <br />
+                            <p>
+                                One of the two social planets, Jupiter rules idealism, optimism, and expansion. It's also very philosophical.
+                            </p>
+                            <br />
+                            <p>
+                                You both have Jupiter in Virgo, meaning you both grow and find understanding through careful thought, goal-setting, and hard work.
+                            </p>
+                            <br />
+                            <p>
+                                The ways you grow and dream are aligned and make intuitive sense to each other.
                             </p>
                         </div>
 

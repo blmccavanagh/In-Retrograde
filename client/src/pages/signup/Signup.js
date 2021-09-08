@@ -1,11 +1,20 @@
 import { useMutation } from '@apollo/client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import auth from '../../utils/auth';
 import { ADD_USER } from '../../utils/mutations';
 import { DateTime } from 'luxon';
 
 const Signup = () => {
+
+  // const history = useHistory();
+  // /// check if there is a token in local storage
+  // // if no redirect the user to login page
+  // useEffect(() => {
+  //     auth.loggedIn() || history.push('/login')
+
+  // }, [history]);
+
   const [formState, setFormState] = useState({
     name: '',
     email: '',

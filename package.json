@@ -29,6 +29,7 @@
     "concurrently": "^6.2.0"
   },
   "dependencies": {
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@mars/heroku-js-runtime-env": "^3.0.2"
   }
 }
